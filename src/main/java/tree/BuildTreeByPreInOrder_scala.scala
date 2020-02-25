@@ -11,6 +11,7 @@ object BuildTreeByPreInOrder_scala {
   def main(args: Array[String]): Unit = {
 
   }
+  // Scala  slice 是 （a,b）  左闭右开区间
 
 
   def buildTree(preorder: Array[Int], inorder: Array[Int]): TreeNode = {
