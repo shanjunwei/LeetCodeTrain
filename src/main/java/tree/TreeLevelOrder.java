@@ -58,6 +58,33 @@ public class TreeLevelOrder {
         return result;
     }
 
+    public List<List<Integer>> levelOrderBottom(TreeNode root) {
+        if (root != null) {
+            queue.add(root);
+        }
+        List<List<Integer>> result = new ArrayList<>();
+        while (!queue.isEmpty()) {
+            List<TreeNode> list = new ArrayList<>();
+            while (!queue.isEmpty()) {
+                TreeNode treeNode = queue.poll();
+                list.add(treeNode);
+            }
+            List<Integer> intList = new ArrayList<>();
+            for (TreeNode treeNode : list) {
+                intList.add(treeNode.val);
+                if (treeNode.left != null) {
+                    queue.add(treeNode.left);
+                }
+                if (treeNode.right != null) {
+                    queue.add(treeNode.right);
+                }
+            }
+            result.add(intList);
+        }
+        Collections.reverse(result);
+        return result;
+    }
+
 
     private Deque<TreeNode> deque = new LinkedList<>();
 

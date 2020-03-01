@@ -12,7 +12,7 @@ object BuildTreeByInAfterOrder {
   }
 
   def buildTree(inorder: Array[Int], postorder: Array[Int]): TreeNode = {
-    println("inorder >> "+ inorder.mkString(" ") + " postorder"+postorder.mkString(" ") )
+   // println("inorder >> "+ inorder.mkString(" ") + " postorder"+postorder.mkString(" ") )
 
 
     if (inorder.length == 0 || postorder.length == 0) return null
