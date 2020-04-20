@@ -9,7 +9,7 @@ object BuildTreeByPreInOrder_scala {
 
 
   def main(args: Array[String]): Unit = {
-
+    println("ss")
   }
   // Scala  slice 是 （a,b）  左闭右开区间
 
@@ -23,7 +23,7 @@ object BuildTreeByPreInOrder_scala {
     //    构建左子树
     root.left =   buildTree(preorder.slice(1,mid+1), inorder.slice(0,mid))
      //   构建右子树
-    root.right = buildTree(preorder.slice(mid+1,preorder.length-1), preorder.slice(mid+1,preorder.length-1))
+    root.right = buildTree(preorder.slice(mid+1,preorder.length-1), inorder.slice(mid+1,inorder.length-1))
 
     root
   }
